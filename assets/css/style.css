@@ -2,10 +2,17 @@ body {
     text-align: center;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #computer-area {
     background-color: yellow;
     height: 240px;
     width: 240px;
+
 
 }
 
@@ -15,8 +22,39 @@ body {
     width: 240px;
 }
 
-#container {
+#computer-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+}
+
+#user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#computer-score {
+    background-color: blue;
+    height: 240px;
+    width: 240px;
+}
+
+#computer-choice {
+    background-color: green;
+    height: 240px;
+    width: 240px;
+}
+
+#user-score {
+    background-color: black;
+    height: 240px;
+    width: 240px;
+}
+
+#user-choice {
+    background-color: pink;
+    height: 240px;
+    width: 240px;
 }
