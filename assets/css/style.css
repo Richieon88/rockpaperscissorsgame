@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+
+#computer-area {
+    background-color: yellow;
+    height: 240px;
+    width: 240px;
+
+}
+
+#user-area {
+    background-color: red;
+    height: 240px;
+    width: 240px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
