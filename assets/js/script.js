@@ -7,33 +7,38 @@ const scissorsComputer = document.getElementById('scissors-com');
 const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
+const resultDisplay = document.getElementById('result');
 let computerChoice;
+let userChoice;
 
 
 rockButton.addEventListener('click', () => {
-    console.log('hi');
+    userChoice = 'rock';
     paperUser.classList.add('hide');
     rockUser.classList.remove('hide');
     scissorsUser.classList.add('hide');
     generateComputerChoice();
+    decideResult();
 });
 
 
 paperButton.addEventListener('click', () => {
-    console.log('hi');
+    userChoice = 'paper';
     paperUser.classList.remove('hide');
     rockUser.classList.add('hide');
     scissorsUser.classList.add('hide');
     generateComputerChoice();
+    decideResult();
 });
 
 
 scissorsButton.addEventListener('click', () => {
-    console.log('hi');
+    userChoice = 'scissors';
     paperUser.classList.add('hide');
     rockUser.classList.add('hide');
     scissorsUser.classList.remove('hide');
     generateComputerChoice();
+    decideResult();
 });
 
 
@@ -59,4 +64,34 @@ function generateComputerChoice() {
         scissorsComputer.classList.remove('hide');
     }
 
+}
+
+function decideResult() {
+    if (computerChoice === userChoice) {
+        resultDisplay.innerHTML = 'its a draw';
+    }
+
+    if (computerChoice === 'rock' && userChoice === 'paper') {
+        resultDisplay.innerHTML = 'you win';
+    }
+
+    if (computerChoice === 'rock' && userChoice === 'scissors') {
+        resultDisplay.innerHTML = 'you lose';
+    }
+
+    if (computerChoice === 'paper' && userChoice === 'rock') {
+        resultDisplay.innerHTML = 'you lose';
+    }
+
+    if (computerChoice === 'paper' && userChoice === 'scissors') {
+        resultDisplay.innerHTML = 'you win';
+    }
+
+    if (computerChoice === 'scissors' && userChoice === 'rock') {
+        resultDisplay.innerHTML = 'you win';
+    }
+
+    if (computerChoice === 'scissors' && userChoice === 'paper') {
+        resultDisplay.innerHTML = 'you lose';
+    }
 }
