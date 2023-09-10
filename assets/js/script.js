@@ -8,8 +8,12 @@ const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
 const resultDisplay = document.getElementById('result');
+const userScoreDisplay = document.getElementById('user-score');
+const computerScoreDisplay = document.getElementById('computer-score');
 let computerChoice;
 let userChoice;
+let computerScore = 0;
+let userScore = 0;
 
 
 rockButton.addEventListener('click', () => {
@@ -73,25 +77,37 @@ function decideResult() {
 
     if (computerChoice === 'rock' && userChoice === 'paper') {
         resultDisplay.innerHTML = 'you win';
+        userScoreDisplay.innerText = userScore;
+        userScore++;
     }
 
     if (computerChoice === 'rock' && userChoice === 'scissors') {
         resultDisplay.innerHTML = 'you lose';
+        computerScoreDisplay.innerText = computerScore;
+        computerScore++;
     }
 
     if (computerChoice === 'paper' && userChoice === 'rock') {
         resultDisplay.innerHTML = 'you lose';
+        computerScoreDisplay.innerText = computerScore;
+        computerScore++;
     }
 
     if (computerChoice === 'paper' && userChoice === 'scissors') {
         resultDisplay.innerHTML = 'you win';
+        userScoreDisplay.innerText = userScore;
+        userScore++;
     }
 
     if (computerChoice === 'scissors' && userChoice === 'rock') {
         resultDisplay.innerHTML = 'you win';
+        userScoreDisplay.innerText = userScore;
+        userScore++;
     }
 
     if (computerChoice === 'scissors' && userChoice === 'paper') {
         resultDisplay.innerHTML = 'you lose';
+        computerScoreDisplay.innerText = computerScore;
+        computerScore++;
     }
 }
