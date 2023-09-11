@@ -11,16 +11,19 @@ body {
 
 #computer-area {
     background-color: yellow;
-    height: 44vh;
-    width: 30vw;
-
+    height: 40vh;
+    width: 25vw;
+    border: 2px solid orange;
+    padding: 5px;
 
 }
 
 #user-area {
     background-color: red;
-    height: 44vh;
-    width: 30vw;
+    height: 40vh;
+    width: 25vw;
+    border: 2px solid orange;
+    padding: 5px;
 }
 
 #computer-container {
@@ -41,33 +44,33 @@ body {
 
 #computer-score {
     background-color: blue;
-    height: 44vh;
-    width: 30vw;
+    height: 40vh;
+    width: 25vw;
 
 
 }
 
 #computer-choice {
     background-color: green;
-    height: 44vh;
-    width: 30vw;
+    height: 40vh;
+    width: 25vw;
 }
 
 #user-score {
     background-color: purple;
-    height: 44vh;
-    width: 30vw;
+    height: 40vh;
+    width: 25vw;
 }
 
 #user-choice {
     background-color: pink;
-    height: 44vh;
-    width: 30vw;
+    height: 40vh;
+    width: 25vw;
 }
 
 img {
-    height: 44vh;
-    width: 30vw;
+    height: 40vh;
+    width: 25vw;
 }
 
 .hide {
