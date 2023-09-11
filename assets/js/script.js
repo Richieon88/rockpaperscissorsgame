@@ -10,6 +10,8 @@ const scissorsButton = document.getElementById('scissors');
 const resultDisplay = document.getElementById('result');
 const userScoreDisplay = document.getElementById('user-score');
 const computerScoreDisplay = document.getElementById('computer-score');
+const userChoiceDisplay = document.getElementById('user-choice');
+const computerChoiceDisplay = document.getElementById('computer-choice');
 let computerChoice;
 let userChoice;
 let computerScore = 0;
@@ -23,6 +25,7 @@ rockButton.addEventListener('click', () => {
     scissorsUser.classList.add('hide');
     generateComputerChoice();
     decideResult();
+    displayChoice();
 });
 
 
@@ -33,6 +36,7 @@ paperButton.addEventListener('click', () => {
     scissorsUser.classList.add('hide');
     generateComputerChoice();
     decideResult();
+    displayChoice();
 });
 
 
@@ -43,6 +47,7 @@ scissorsButton.addEventListener('click', () => {
     scissorsUser.classList.remove('hide');
     generateComputerChoice();
     decideResult();
+    displayChoice();
 });
 
 
@@ -110,4 +115,9 @@ function decideResult() {
         computerScoreDisplay.innerText = computerScore;
         computerScore++;
     }
+}
+
+function displayChoice() {
+    userChoiceDisplay.innerHTML = userChoice;
+    computerChoiceDisplay.innerHTML = computerChoice;
 }
