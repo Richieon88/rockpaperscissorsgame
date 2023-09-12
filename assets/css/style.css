@@ -11,7 +11,7 @@ body {
 
 #computer-area {
     background-color: yellow;
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
     border: 2px solid orange;
     padding: 5px;
@@ -20,7 +20,7 @@ body {
 
 #user-area {
     background-color: red;
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
     border: 2px solid orange;
     padding: 5px;
@@ -44,7 +44,7 @@ body {
 
 #computer-score {
     background-color: blue;
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
 
 
@@ -52,26 +52,26 @@ body {
 
 #computer-choice {
     background-color: green;
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
 }
 
 #user-score {
     background-color: purple;
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
 }
 
 #user-choice {
     background-color: pink;
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
 }
 
 
 
 img {
-    height: 25vh;
+    height: 20vh;
     width: 20vw;
 }
 
