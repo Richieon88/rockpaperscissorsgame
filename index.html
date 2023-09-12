@@ -8,6 +8,7 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <h1>Rock,Paper,Scissors</h1>
     <div id="container">
       <div id="computer-container">
         <div><h2>Computer Score: </h2><h2 id="computer-score">0</h2></div>
@@ -16,7 +17,7 @@
         <img id="paper-com" class="hide" src="assets/images/paper.jpg" alt="hand making paper gesture">
         <img id="scissors-com" class="hide" src="assets/images/scissors.jpg" alt="hand making scissors gesture">
         </div>
-      <div id="computer-choice"></div>
+      <div><h2>Computer Choice:</h2> <h2 id="computer-choice"></h2></div>
       </div>
 
         <div id="user-container">
@@ -28,14 +29,15 @@
          <img id="paper-user" class="hide" src="assets/images/paper.jpg" alt="hand making paper gesture">
          <img id="scissors-user" class="hide" src="assets/images/scissors.jpg" alt="hand making scissors gesture">
          </div>
-         <div id="user-choice"><div>
-            <h2 id="result"></h2>
-         </div></div>
+         <div><h2>Your Choice:</h2><h2 id="user-choice"></h2><h2></div>
         </div>
-        <div>
+        <div id="control-area">
+         <div id="controls">
           <button id="rock">rock</button>
           <button id="paper">paper</button>
           <button id="scissors">scissors</button>
+        </div>
+          <div id="result-screen"><h2 id="result"></h2><button id="next-button">Next</button></div>
         </div>
       </div>
     </div>
