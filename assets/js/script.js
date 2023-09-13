@@ -15,6 +15,9 @@ const computerChoiceDisplay = document.getElementById('computer-choice');
 const controlArea = document.getElementById('controls');
 const resultScreen = document.getElementById('result-screen');
 const nextButton = document.getElementById('next-button');
+const gameOverScreen = document.getElementById('game-over-screen');
+const gameOverText = document.getElementById('game-over');
+const playAgainButton = document.getElementById('play-again');
 let computerChoice;
 let userChoice;
 let computerScore = 0;
@@ -60,6 +63,14 @@ scissorsButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
     controlArea.classList.remove('hide');
     resultScreen.classList.add('hide');
+});
+
+playAgainButton.addEventListener('click', () => {
+    controlArea.classList.remove('hide');
+    resultScreen.classList.add('hide');
+    gameOverScreen.classList.add('hide');
+    computerScore = 0;
+    userScore = 0;
 });
 
 function generateComputerChoice() {
@@ -136,4 +147,17 @@ function displayChoice() {
 function showResult() {
     controlArea.classList.add('hide');
     resultScreen.classList.remove('hide');
+    if (userScore >= 5) {
+        gameOverScreen.classList.remove('hide');
+        controlArea.classList.add('hide');
+        resultScreen.classList.add('hide');
+        gameOverText.innerHTML = 'Congratulations! You Win!';
+    }
+
+    if (computerScore >= 5) {
+        gameOverScreen.classList.remove('hide');
+        controlArea.classList.add('hide');
+        resultScreen.classList.add('hide');
+        gameOverText.innerHTML = 'Hard Luck. Computer Wins.';
+    }
 }
