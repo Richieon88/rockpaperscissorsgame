@@ -69,6 +69,8 @@ playAgainButton.addEventListener('click', () => {
     controlArea.classList.remove('hide');
     resultScreen.classList.add('hide');
     gameOverScreen.classList.add('hide');
+    computerScoreDisplay.innerHTML = 0;
+    userScoreDisplay.innerHTML = 0;
     computerScore = 0;
     userScore = 0;
 });
@@ -104,37 +106,37 @@ function decideResult() {
 
     if (computerChoice === 'rock' && userChoice === 'paper') {
         resultDisplay.innerHTML = 'you win';
-        userScoreDisplay.innerText = userScore;
+        userScoreDisplay.innerText = userScore + 1;
         userScore++;
     }
 
     if (computerChoice === 'rock' && userChoice === 'scissors') {
         resultDisplay.innerHTML = 'you lose';
-        computerScoreDisplay.innerText = computerScore;
+        computerScoreDisplay.innerText = computerScore + 1;
         computerScore++;
     }
 
     if (computerChoice === 'paper' && userChoice === 'rock') {
         resultDisplay.innerHTML = 'you lose';
-        computerScoreDisplay.innerText = computerScore;
+        computerScoreDisplay.innerText = computerScore + 1;
         computerScore++;
     }
 
     if (computerChoice === 'paper' && userChoice === 'scissors') {
         resultDisplay.innerHTML = 'you win';
-        userScoreDisplay.innerText = userScore;
+        userScoreDisplay.innerText = userScore + 1;
         userScore++;
     }
 
     if (computerChoice === 'scissors' && userChoice === 'rock') {
         resultDisplay.innerHTML = 'you win';
-        userScoreDisplay.innerText = userScore;
+        userScoreDisplay.innerText = userScore + 1;
         userScore++;
     }
 
     if (computerChoice === 'scissors' && userChoice === 'paper') {
         resultDisplay.innerHTML = 'you lose';
-        computerScoreDisplay.innerText = computerScore;
+        computerScoreDisplay.innerText = computerScore + 1;
         computerScore++;
     }
 }
