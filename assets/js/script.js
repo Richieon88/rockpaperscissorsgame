@@ -18,6 +18,8 @@ const nextButton = document.getElementById('next-button');
 const gameOverScreen = document.getElementById('game-over-screen');
 const gameOverText = document.getElementById('game-over');
 const playAgainButton = document.getElementById('play-again');
+const questionMarkUser = document.getElementById('question-mark-user');
+const questionMarkCom = document.getElementById('question-mark-com');
 let computerChoice;
 let userChoice;
 let computerScore = 0;
@@ -29,6 +31,8 @@ rockButton.addEventListener('click', () => {
     paperUser.classList.add('hide');
     rockUser.classList.remove('hide');
     scissorsUser.classList.add('hide');
+    questionMarkUser.classList.add('hide');
+    questionMarkCom.classList.add('hide');
     generateComputerChoice();
     decideResult();
     displayChoice();
@@ -41,6 +45,8 @@ paperButton.addEventListener('click', () => {
     paperUser.classList.remove('hide');
     rockUser.classList.add('hide');
     scissorsUser.classList.add('hide');
+    questionMarkUser.classList.add('hide');
+    questionMarkCom.classList.add('hide');
     generateComputerChoice();
     decideResult();
     displayChoice();
@@ -53,6 +59,8 @@ scissorsButton.addEventListener('click', () => {
     paperUser.classList.add('hide');
     rockUser.classList.add('hide');
     scissorsUser.classList.remove('hide');
+    questionMarkUser.classList.add('hide');
+    questionMarkCom.classList.add('hide');
     generateComputerChoice();
     decideResult();
     displayChoice();
@@ -63,16 +71,28 @@ scissorsButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
     controlArea.classList.remove('hide');
     resultScreen.classList.add('hide');
+    userChoiceDisplay.innerHTML = '?';
+    computerChoiceDisplay.innerHTML = '?';
 });
 
 playAgainButton.addEventListener('click', () => {
     controlArea.classList.remove('hide');
     resultScreen.classList.add('hide');
     gameOverScreen.classList.add('hide');
+    questionMarkUser.classList.remove('hide');
+    questionMarkCom.classList.remove('hide');
+    paperUser.classList.add('hide');
+    rockUser.classList.add('hide');
+    scissorsUser.classList.add('hide');
+    rockComputer.classList.add('hide');
+    paperComputer.classList.add('hide');
+    scissorsComputer.classList.add('hide');
     computerScoreDisplay.innerHTML = 0;
     userScoreDisplay.innerHTML = 0;
     computerScore = 0;
     userScore = 0;
+    userChoiceDisplay.innerHTML = '?';
+    computerChoiceDisplay.innerHTML = '?';
 });
 
 function generateComputerChoice() {
