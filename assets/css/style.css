@@ -10,9 +10,15 @@ body {
 
 h1 {
     max-width: 100%;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 9px;
 }
 
 #container {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,15 +26,15 @@ h1 {
 }
 
 #computer-area {
-    height: 25%;
-    width: 25%;
+    height: 80px;
+    width: 65px;
     border: 2px solid orange;
 
 }
 
 #user-area {
-    height: 25%;
-    width: 25%;
+    height: 80px;
+    width: 65px;
     border: 2px solid orange;
 }
 
@@ -48,47 +54,49 @@ h1 {
 
 #computer-score-area {
     text-align: left;
+    height: 80px;
+    width: 65px;
 }
 
 #computer-score {
-    height: 40%;
-    width: 30%;
+
     text-align: left;
 }
 
 #computer-choice-area {
     text-align: right;
+    height: 80px;
+    width: 65px;
 }
 
 #computer-choice {
-    height: 40%;
-    width: 30%;
     text-align: right;
 }
 
 #user-score {
-    height: 40%;
-    width: 30%;
     text-align: left;
 }
 
 #user-score-area {
     text-align: left;
+    height: 80px;
+    width: 60px;
+    margin-right: 5px;
 }
 
 #user-choice {
-    height: 40%;
-    width: 30%;
     text-align: right;
 }
 
 #user-choice-area {
     text-align: right;
+    height: 80px;
+    width: 65px;
 }
 
 img {
-    width: 50%;
-    height: 50%;
+    width: 65px;
+    height: 80px;
 }
 
 #control-area {
@@ -101,7 +109,7 @@ button {
     background-color: #FBEAEB;
     color: #2F3C7E;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .hide {
