@@ -180,6 +180,7 @@ button {
     #computer-score-area {
         height: 175px;
         width: 160px;
+        margin-left: 5px;
     }
 
     #computer-choice-area {
@@ -190,6 +191,7 @@ button {
     #user-score-area {
         height: 175px;
         width: 160px;
+        margin-left: 5px;
     }
 
     #user-choice-area {

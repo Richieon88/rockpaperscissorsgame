@@ -20,6 +20,8 @@ const gameOverText = document.getElementById('game-over');
 const playAgainButton = document.getElementById('play-again');
 const questionMarkUser = document.getElementById('question-mark-user');
 const questionMarkCom = document.getElementById('question-mark-com');
+const startMenu = document.getElementById('start-menu');
+const startButton = document.getElementById('start-button');
 let computerChoice;
 let userChoice;
 let computerScore = 0;
@@ -93,6 +95,11 @@ playAgainButton.addEventListener('click', () => {
     userScore = 0;
     userChoiceDisplay.innerHTML = '?';
     computerChoiceDisplay.innerHTML = '?';
+});
+
+startButton.addEventListener('click', () => {
+    startMenu.classList.add('hide');
+    controlArea.classList.remove('hide');
 });
 
 function generateComputerChoice() {
