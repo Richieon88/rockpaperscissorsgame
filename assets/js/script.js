@@ -28,6 +28,12 @@ let computerScore = 0;
 let userScore = 0;
 
 
+
+/**
+ * Event listener for when the rock button is clicked
+ * It displays the rock image and then hides all other images
+ * it then runs four funtions.
+ */
 rockButton.addEventListener('click', () => {
     userChoice = 'rock';
     paperUser.classList.add('hide');
@@ -42,6 +48,12 @@ rockButton.addEventListener('click', () => {
 });
 
 
+
+/**
+ * Event listener for when the paper button is clicked
+ * It displays the rock image and then hides all other images
+ * it then runs four funtions.
+ */
 paperButton.addEventListener('click', () => {
     userChoice = 'paper';
     paperUser.classList.remove('hide');
@@ -55,7 +67,11 @@ paperButton.addEventListener('click', () => {
     showResult();
 });
 
-
+/**
+ * Event listener for when the scissors button is clicked
+ * It displays the scissors image and then hides all other images
+ * it then runs four funtions.
+ */
 scissorsButton.addEventListener('click', () => {
     userChoice = 'scissors';
     paperUser.classList.add('hide');
@@ -70,6 +86,11 @@ scissorsButton.addEventListener('click', () => {
 });
 
 
+/**
+ * Event listener for when the next button is clicked
+ * It displays the rock, paper and scissors buttons again
+ * it then displays the default images for the user and com areas.
+ */
 nextButton.addEventListener('click', () => {
     controlArea.classList.remove('hide');
     resultScreen.classList.add('hide');
@@ -77,6 +98,11 @@ nextButton.addEventListener('click', () => {
     computerChoiceDisplay.innerHTML = '?';
 });
 
+/**
+ * Event listener for when the play again button is clicked
+ * It displays the default starting image and then hides all other images
+ * it resets the score and returns everything to its starting state
+ */
 playAgainButton.addEventListener('click', () => {
     controlArea.classList.remove('hide');
     resultScreen.classList.add('hide');
@@ -97,11 +123,23 @@ playAgainButton.addEventListener('click', () => {
     computerChoiceDisplay.innerHTML = '?';
 });
 
+
+/**
+ * Event listener for when the start button is clicked
+ * It displays the rock paper and scissors buttons when clicked
+ */
 startButton.addEventListener('click', () => {
     startMenu.classList.add('hide');
     controlArea.classList.remove('hide');
 });
 
+
+
+/**
+ * Funcion that decides what the computers choice is going to be
+ * It generates a random number between 0 and 2 and attributes it to a choice
+ * it then displays the appropriate image and hides the others
+ */
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {
@@ -126,6 +164,12 @@ function generateComputerChoice() {
 
 }
 
+
+/**
+ * Funcion that decides the outcome of the game
+ * It compares the computers choice with the users choice and decides the winner
+ * it then displays a message that tells the user the outcome
+ */
 function decideResult() {
     if (computerChoice === userChoice) {
         resultDisplay.innerHTML = 'its a draw';
@@ -168,11 +212,22 @@ function decideResult() {
     }
 }
 
+
+/**
+ * Funcion that shows the computer and user choices
+ * It shows a message beside the image of the choice
+ */
 function displayChoice() {
     userChoiceDisplay.innerHTML = userChoice;
     computerChoiceDisplay.innerHTML = computerChoice;
 }
 
+
+/**
+ * Funcion that ends the game if the user or computer reach 5 points
+ * It then removes the control buttons and displays the play again button
+ * it then displays a message showing who won
+ */
 function showResult() {
     controlArea.classList.add('hide');
     resultScreen.classList.remove('hide');
