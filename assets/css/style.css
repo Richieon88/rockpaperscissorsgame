@@ -50,6 +50,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 15px;
 }
 
 #computer-score-area {
@@ -80,8 +81,7 @@ h2 {
 #user-score-area {
     text-align: left;
     height: 80px;
-    width: 60px;
-    margin-right: 5px;
+    width: 65px;
 }
 
 #user-choice {
@@ -114,4 +114,99 @@ button {
 
 .hide {
     display: none;
+}
+
+/* Media query for tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    #computer-area {
+        height: 160px;
+        width: 145px;
+    }
+
+    #user-area {
+        height: 160px;
+        width: 145px;
+    }
+
+    #computer-score-area {
+        height: 160px;
+        width: 145px;
+    }
+
+    #computer-choice-area {
+        height: 160px;
+        width: 145px;
+        margin-left: 5px;
+    }
+
+    #user-score-area {
+        height: 160px;
+        width: 145px;
+    }
+
+    #user-choice-area {
+        height: 160px;
+        width: 145px;
+        margin-left: 5px;
+    }
+
+    img {
+        width: 145px;
+        height: 160px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+/* Media query for tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    #computer-area {
+        height: 175px;
+        width: 160px;
+    }
+
+    #user-area {
+        height: 175px;
+        width: 160px;
+    }
+
+    #computer-score-area {
+        height: 175px;
+        width: 160px;
+    }
+
+    #computer-choice-area {
+        height: 175px;
+        width: 160px;
+    }
+
+    #user-score-area {
+        height: 175px;
+        width: 160px;
+    }
+
+    #user-choice-area {
+        height: 175px;
+        width: 160px;
+    }
+
+    img {
+        width: 160px;
+        height: 175px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
 }
