@@ -8,43 +8,101 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Rock,Paper,Scissors</h1>
-    <div id="container"> 
+    <h1>Rock Paper Scissors</h1>
+    <div id="container">
+      <!--Container for the computer score, image and choice sections-->
       <div id="computer-container">
-        <div id="computer-score-area"><h2>Computer Score</h2><h2 id="computer-score">0</h2></div>
+        <div id="computer-score-area">
+          <h2>Computer Score</h2>
+          <h2 id="computer-score">0</h2>
+        </div>
         <div id="computer-area">
-         <img id="question-mark-com" src="assets/images/question-mark.jpeg" alt="image of a question mark">
-         <img id="rock-com" class="hide" src="assets/images/rock.jpg" alt="hand making rock gesture">
-         <img id="paper-com" class="hide" src="assets/images/paper.jpg" alt="hand making paper gesture">
-         <img id="scissors-com" class="hide" src="assets/images/scissors.jpg" alt="hand making scissors gesture">
+          <img
+            id="question-mark-com"
+            src="assets/images/question-mark.jpeg"
+            alt="image of a question mark"
+          />
+          <img
+            id="rock-com"
+            class="hide"
+            src="assets/images/rock.jpg"
+            alt="hand making rock gesture"
+          />
+          <img
+            id="paper-com"
+            class="hide"
+            src="assets/images/paper.jpg"
+            alt="hand making paper gesture"
+          />
+          <img
+            id="scissors-com"
+            class="hide"
+            src="assets/images/scissors.jpg"
+            alt="hand making scissors gesture"
+          />
         </div>
-         <div id="computer-choice-area"><h2>Computer Choice</h2> <h2 id="computer-choice">?</h2></div>
+        <div id="computer-choice-area">
+          <h2>Computer Choice</h2>
+          <h2 id="computer-choice">?</h2>
+        </div>
       </div>
-
-        <div id="user-container">
-          <div id="user-score-area"><h2>Your Score</h2><h2 id="user-score">0</h2>
-          </div>
-         <div id="user-area">
-          <img id="question-mark-user" src="assets/images/question-mark.jpeg" alt="image of a question mark">
-          <img id="rock-user" class="hide" src="assets/images/rock.jpg" alt="hand making rock gesture">
-          <img id="paper-user" class="hide" src="assets/images/paper.jpg" alt="hand making paper gesture">
-          <img id="scissors-user" class="hide" src="assets/images/scissors.jpg" alt="hand making scissors gesture">
-         </div>
-         <div id="user-choice-area"><h2>Your Choice</h2><h2 id="user-choice">?</h2><h2></div>
+      <!--Container for the User score, choice and image sections-->
+      <div id="user-container">
+        <div id="user-score-area">
+          <h2>Your Score</h2>
+          <h2 id="user-score">0</h2>
         </div>
-        <div id="control-area">
-         <div id="controls" class="hide">
+        <div id="user-area">
+          <img
+            id="question-mark-user"
+            src="assets/images/question-mark.jpeg"
+            alt="image of a question mark"
+          />
+          <img
+            id="rock-user"
+            class="hide"
+            src="assets/images/rock.jpg"
+            alt="hand making rock gesture"
+          />
+          <img
+            id="paper-user"
+            class="hide"
+            src="assets/images/paper.jpg"
+            alt="hand making paper gesture"
+          />
+          <img
+            id="scissors-user"
+            class="hide"
+            src="assets/images/scissors.jpg"
+            alt="hand making scissors gesture"
+          />
+        </div>
+        <div id="user-choice-area">
+          <h2>Your Choice</h2>
+          <h2 id="user-choice">?</h2>
+        </div>
+      </div>
+      <!--Container for the control buttons of the game-->
+      <div id="control-area">
+        <div id="controls" class="hide">
           <h2>Make your choice</h2>
-          <button id="rock">rock</button>
-          <button id="paper">paper</button>
-          <button id="scissors">scissors</button>
-         </div>
-          <div id="result-screen" class="hide"><h2 id="result"></h2><button id="next-button">Next</button></div>
+          <button aria-label="choose rock" id="rock">rock</button>
+          <button aria-label="choose paper" id="paper">paper</button>
+          <button aria-label="choose scissors" id="scissors">scissors</button>
         </div>
-           <div id="game-over-screen" class="hide"><h2 id="game-over"></h2><button id="play-again">Play Again</button></div>
-        <div id="start-menu">
-            <h2>First to score 5 points wins</h2>
-            <button id="start-button">Start Game</button>
+        <div id="result-screen" class="hide">
+          <h2 id="result"></h2>
+          <button aria-label="next round" id="next-button">Next</button>
+        </div>
+      </div>
+      <!--Container for the start menu and game over screen-->
+      <div id="game-over-screen" class="hide">
+        <h2 id="game-over"></h2>
+        <button aria-label="play game again" id="play-again">Play Again</button>
+      </div>
+      <div id="start-menu">
+        <h2>First to score 5 points wins</h2>
+        <button aria-label="start game" id="start-button">Start Game</button>
       </div>
     </div>
     <script src="assets/js/script.js"></script>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+/* Body and headings section */
 body {
     font-family: Audiowide, sans-serif;
     background-color: #2F3C7E;
@@ -17,6 +18,7 @@ h2 {
     font-size: 9px;
 }
 
+/* Main Container */
 #container {
     margin-top: 50px;
     display: flex;
@@ -25,19 +27,7 @@ h2 {
     max-width: 100%;
 }
 
-#computer-area {
-    height: 80px;
-    width: 65px;
-    border: 2px solid orange;
-
-}
-
-#user-area {
-    height: 80px;
-    width: 65px;
-    border: 2px solid orange;
-}
-
+/* Section for all the computer areas */
 #computer-container {
     display: flex;
     flex-direction: row;
@@ -45,12 +35,11 @@ h2 {
     justify-content: space-evenly;
 }
 
-#user-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 15px;
+#computer-area {
+    height: 80px;
+    width: 65px;
+    border: 2px solid orange;
+
 }
 
 #computer-score-area {
@@ -74,6 +63,21 @@ h2 {
     text-align: right;
 }
 
+/* Section for all the user areas */
+#user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+#user-area {
+    height: 80px;
+    width: 65px;
+    border: 2px solid orange;
+}
+
 #user-score {
     text-align: left;
 }
@@ -94,11 +98,13 @@ h2 {
     width: 65px;
 }
 
+/* Section for images */
 img {
     width: 65px;
     height: 80px;
 }
 
+/* Section for all the control area */
 #control-area {
     justify-content: center;
     margin-top: 30px;
@@ -112,6 +118,7 @@ button {
     font-size: 15px;
 }
 
+/* Class used to hide elements */
 .hide {
     display: none;
 }
