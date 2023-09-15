@@ -15,7 +15,7 @@ h1 {
 }
 
 h2 {
-    font-size: 9px;
+    font-size: 12px;
 }
 
 /* Main Container */
@@ -31,8 +31,9 @@ h2 {
 #computer-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 #computer-area {
@@ -67,9 +68,10 @@ h2 {
 #user-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     margin-top: 15px;
+    width: 100%;
 }
 
 #user-area {
