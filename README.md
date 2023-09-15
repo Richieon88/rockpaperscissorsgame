@@ -1,39 +1,129 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Galway Soccer Club
 
-Welcome,
+[Rock Paper Scissors](https://richieon88.github.io/rockpaperscissorsgame/) is an app for playing a simple game of rock paper scissors. Users play a game of rock paper scissors against the computer over five rounds and see if they can win. The user has to make a choice between rock, paper or scissors by clicking the buttons corresponding to there choice.
+The computer choices are random and its up to the user to try and come out on top.
+Its a simple game of chance that anyone can play and have fun with.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![Responsive Mockup](assets/images/responsive.png)
 
-## Codeanywhere Reminders
+## Technologies used
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- HTML
+- CSS
+- Javascript
+- Google fonts
 
-`python3 -m http.server`
+## Features
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Existing Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- **Title**
 
-`http_server`
+  - The title of the game is featured at the top of the game at all times.
+  - It clearly states the name of the game the users are playing.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Title](assets/images/title.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- **Score Areas**
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - The score areas are where the current scores of the game are displayed.
+  - There is an area for the computer's score and one for the user's score.
+  - When the user or the computer win a round the score display goes up by one.
 
-To log into the Heroku toolbelt CLI:
+![Score Areas](assets/images/score-areas.png)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Image Area**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - The image area is where the images of the choices made by the user and computer are shown.
+  - When the user clicks one of the buttons to make a choice of either rock, paper or scissors a corresponding image is shown in this section.
+  - The randomly selected choice of the computer is also diplayed with an image, just above the user's image
+  - The images are displayed one above the other to show a head to head style.
 
----
+![Image Area](assets/images/image-area.png)
 
-Happy coding!
+- **The Choices Area**
+
+  - The choices area displays the option chose by the computer and user.
+  - By default it shows a question mark but it updates with text of the choice made.
+
+![Choices Area](assets/images/choices-area.png)
+
+- **Control Area**
+
+  - The control area is where the game is played from.
+  - Its located at the bottom of the page below the images area.
+  - It features three buttons that make-up the options of rock, paper and scissors.
+  - When one of the buttons is clicked the user makes that choice and an image of that choice is displayed.
+  - Clicking one of the buttons also triggers the computer to make their choice and an image of there choice is also displayed.
+  - At the start of the game this area has a start game button and text stating the win conditions
+  - When the win conditions are met by either the computer or the user a message is displayed to relay the outcome and a play again button is shown.
+  - If the play again button is clicked the game restarts so the user can play again.
+
+![Control Area](assets/images/control-area.png)
+
+
+### Features Left to Implement
+
+- A feature where the user could adjust the amount of rounds it takes to win could be implemented
+- An option to play with a timer could be implemented if the user wanted to play a quicker game.
+
+## Testing
+
+- I tested that the game works in different browsers: Chrome, Firefox,Edge.
+- I tested on different size screens to make sure it was responsive and everything functions as intended.
+- I tested all the buttons to make sure they function in the correct manner.
+- I had friends and family play it to make sure there were no bugs.
+
+### Validator Testing
+
+- ##### HTML
+
+  - No errors were found when passing through the official W3C validator.
+  - Warnings for trailing slash on void elements has no effect and interacts badly with unquoted attribute values are shown
+  - When saving on Codeanywhere it automaticly formats the html file to have trailing slashes even when they are deleted.
+
+- ##### CSS
+
+  - No errors or warnings were found when passing through the official W3C (Jigsaw) validator.
+
+- ##### Accessibility and performance
+
+  - Using lighthouse in devtools I confirmed that the website is performing well, accessible and colors and fonts chosen are readable.
+    ![Performance score](assets/images/lighthouse.png)
+
+### Bugs
+
+- ##### Solved bugs
+
+  - There was a bug in with the game not updating the scores correctly.
+  - I fixed the javascript code by adding +1 when incrementing scores in the game
+
+  ***
+
+  - I had a bug with the text choices appearing in the wrong section of the game area.
+  - I fixed it by attaching the right id to the right section og html.
+
+- ##### Unsolved bugs
+
+  - None.
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - [Rock Paper Scissors](https://richieon88.github.io/rockpaperscissorsgame/)
+
+## Credits
+
+### Content
+
+- The fonts used where taken from Google Fonts.
+
+### Media
+
+- All the images used for the rock, paper and scissors choices are from [Vecteezy.com](https://www.vecteezy.com/)
+- The default question mark image is taken from [Publicdomainpictures.net](https://www.publicdomainpictures.net/)
